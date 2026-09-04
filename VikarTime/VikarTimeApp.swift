@@ -1,17 +1,16 @@
-//
-//  VikarTimeApp.swift
-//  VikarTime
-//
-//  Created by Kabita Limbu on 20/08/2026.
-//
-
 import SwiftUI
+import SwiftData
 
 @main
 struct VikarTimeApp: App {
+
     var body: some Scene {
+
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
+        .modelContainer(
+            for: WorkEntry.self
+        )
     }
 }
